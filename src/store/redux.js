@@ -19,7 +19,15 @@ const quoteSlice = createSlice({
       text: "Fuck me!",
     },
   ],
-  reducers: {},
+  reducers: {
+    addQuote(state, action) {
+      const newItem = {
+        id: `q${state.length + 1}`,
+        ...action.payload,
+      };
+      state.push(newItem);
+    },
+  },
 });
 
 export const quoteActions = quoteSlice.actions;
