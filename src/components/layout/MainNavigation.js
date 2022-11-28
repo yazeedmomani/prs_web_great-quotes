@@ -13,6 +13,8 @@ function MainNavigation() {
               activeClassName={css.active}>
               All Quotes
             </NavLink>
+          </li>
+          <li>
             <NavLink
               to="/new-quote"
               activeClassName={css.active}>
