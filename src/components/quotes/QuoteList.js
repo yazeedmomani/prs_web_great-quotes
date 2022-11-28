@@ -14,6 +14,7 @@ const QuoteList = (props) => {
   const sortHandler = function (e) {
     e.preventDefault();
     history.push(`/quotes?sort=${isAscending ? "desc" : "asc"}`);
+    alert("This function does not work");
   };
 
   return (
