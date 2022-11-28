@@ -24,6 +24,11 @@ function App() {
             <Redirect to="/quotes" />
           </Route>
           <Route
+            path="/great-quotes"
+            exact>
+            <Redirect to="/quotes" />
+          </Route>
+          <Route
             path="/quotes"
             exact>
             <AllQuotes />
