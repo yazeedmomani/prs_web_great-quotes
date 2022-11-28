@@ -1,24 +1,21 @@
-import { useState } from 'react';
-
-import classes from './Comments.module.css';
-import NewCommentForm from './NewCommentForm';
+import classes from "./Comments.module.css";
 
 const Comments = () => {
-  const [isAddingComment, setIsAddingComment] = useState(false);
-
-  const startAddCommentHandler = () => {
-    setIsAddingComment(true);
+  const btn = (e) => {
+    e.preventDefault();
+    alert("This function does not work");
   };
-  
+
   return (
     <section className={classes.comments}>
       <h2>User Comments</h2>
-      {!isAddingComment && (
-        <button className='btn' onClick={startAddCommentHandler}>
-          Add a Comment
-        </button>
-      )}
-      {isAddingComment && <NewCommentForm />}
+
+      <button
+        className="btn"
+        onClick={btn}>
+        Add a Comment
+      </button>
+
       <p>Comments...</p>
     </section>
   );
