@@ -4,7 +4,11 @@ import { NavLink } from "react-router-dom";
 function MainNavigation() {
   return (
     <header className={css.header}>
-      <div className={css.logo}>Great Quotes</div>
+      <NavLink
+        to="/quotes"
+        className={css.yaz}>
+        <div className={css.logo}>Great Quotes</div>
+      </NavLink>
       <nav className={css.nav}>
         <ul>
           <li>
