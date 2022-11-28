@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useCallback } from "react";
 import { useDispatch } from "react-redux";
 
 import Card from "../UI/Card";
@@ -19,12 +19,15 @@ const QuoteForm = (props) => {
 
     // optional: Could validate here
     if (!enteredAuthor.trim().length || !enteredText.trim().length) {
-      console.alert("Invalid Input");
+      alert("Invalid Input");
+      return;
     }
 
     dispatch(
       quoteActions.addQuote({ author: enteredAuthor, text: enteredText })
     );
+
+    alert(`Success! Your quote has been added to "All Quotes"`);
   }
 
   return (
