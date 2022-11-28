@@ -7,7 +7,7 @@ function QuoteDetail() {
 
   return (
     <Fragment>
-      <h1>{param.quoteId}</h1>;
+      <h1>{param.quoteId}</h1>
       <Route path={`/quotes/${param.quoteId}/comments`}>
         <Comments />
       </Route>
