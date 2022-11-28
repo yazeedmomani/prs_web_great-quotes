@@ -6,17 +6,17 @@ const quoteSlice = createSlice({
     {
       id: "q1",
       author: "Max",
-      text: "Fuck you Omar! 😁",
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     },
     {
       id: "q2",
       author: "Yazeed",
-      text: "Fuck you Omar! 💖",
+      text: "Aspernatur esse cumque distinctio facere, earum labore pariatur quos non.",
     },
     {
       id: "q3",
       author: "Omar",
-      text: "Fuck me!",
+      text: "Necessitatibus ullam expedita esse saepe distinctio. Culpa ullam dicta aliquid distinctio neque.",
     },
   ],
   reducers: {
