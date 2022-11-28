@@ -1,4 +1,4 @@
-import { useParams, Route } from "react-router-dom";
+import { useParams, Route, useHistory } from "react-router-dom";
 import { Fragment } from "react";
 import Comments from "../components/comments/Comments";
 import { useSelector } from "react-redux";
@@ -6,12 +6,14 @@ import HighlightedQuote from "../components/quotes/HighlightedQuote";
 
 function QuoteDetail() {
   const param = useParams();
+  const history = useHistory();
 
   const [quotes] = useSelector((state) => state).filter(
     (cur) => cur.id === param.quoteId
   );
 
   if (!quotes) {
+    history.push("/404");
     return;
   }
 

@@ -5,11 +5,13 @@ import Card from "../UI/Card";
 import LoadingSpinner from "../UI/LoadingSpinner";
 import classes from "./QuoteForm.module.css";
 import { quoteActions } from "../../store/redux";
+import { useHistory } from "react-router-dom";
 
 const QuoteForm = (props) => {
   const authorInputRef = useRef();
   const textInputRef = useRef();
   const dispatch = useDispatch();
+  const history = useHistory();
 
   function submitFormHandler(event) {
     event.preventDefault();
@@ -27,7 +29,7 @@ const QuoteForm = (props) => {
       quoteActions.addQuote({ author: enteredAuthor, text: enteredText })
     );
 
-    alert(`Success! Your quote has been added to "All Quotes"`);
+    history.push("/quotes");
   }
 
   return (
